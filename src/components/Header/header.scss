@@ -1,0 +1,46 @@
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2vw;
+    height: 80px;
+    width: 100%;
+    background-color: transparent;
+    position: absolute;
+    z-index: 99;
+  
+    .left-nav {
+      height: 100%;
+      width: 70%;
+      display: flex;
+      gap: 4vw;
+      align-items: center;
+    }
+  
+    img {
+      height: 50%;
+      margin-right: 20px;
+    }
+  
+    .links {
+      display: flex;
+      gap: 3vw;
+    }
+  
+    .links a {
+      font-size: 1.2vw;
+    }
+
+    i{
+        font-size: 1.6vw;
+        color: #fefefe;
+        margin-right: 2vw;
+        cursor: pointer;
+        transition: all ease 0.2s;
+
+      &:hover{
+          color: red;
+      }
+    }
+  }
+  
