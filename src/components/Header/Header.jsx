@@ -7,7 +7,7 @@ function Header() {
   return (
     <div className='nav'>
         <div className="left-nav">
-            <img src='../../public/logo.png'/>
+            <img src='../../../public/logo.png'/>
             <div className="links">
                 <Link to='/'>Tv Shows</Link>
                 <Link to='movies'>Movies</Link>
