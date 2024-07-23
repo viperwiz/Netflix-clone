@@ -1,11 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './app.scss';
-import Home from './components/Home/Home';
+import Home from './pages/Home/Home';
 import Header from './components/Header/Header';
-import Movies from './components/Movies/Movies';
-import Recent from './components/Recent/Recent';
-import Watchlist from './components/Watchlist/Watchlist';
+import Movies from './pages/Movies/Movies';
+import Recent from './pages/Recent/Recent';
+import Watchlist from './pages/Watchlist/Watchlist';
+import Footer  from './components/Footer/Footer';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path='/recentlyadded' element={<Recent/>} />
         <Route path='/watchlist' element={<Watchlist/>} />
       </Routes>
+      <Footer/>
     </Router>
   );
 }

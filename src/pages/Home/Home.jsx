@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Row from '../../components/Row/row'
 import "./home.scss";
 import axios from "axios";
 
@@ -8,7 +9,7 @@ const imgUrl = "https://image.tmdb.org/t/p/original";
 const upcoming = "upcoming";
 const api_key = "13eb858c1ea865b45427bfcb67ce040d";
 
-const Card = ({ img }) => <img src={img} alt="CoverImg" />;
+
 
 function Home() {
   const [upcomingMovies, setupcomingMovies] = useState([]);
@@ -47,19 +48,18 @@ function Home() {
     };
 
     const chooseBanner = () => {
-      
       setInterval(() => {
-        setpicker(picker + 1);
-      }, 30000);
-      
-    }
+        const newPicker = Math.round(Math.random() * popularMovies.length);
+        setpicker(newPicker);
+      }, 50000);
+    };
 
     chooseBanner();
     fetchUpcomingData();
     fetchTopRated();
     fetchPopular();
     fetchTrending();
-  }, []);
+  }, [popularMovies.length]);
 
   const bannerMovie = popularMovies.length > 1 ? popularMovies[picker] : null;
   const bannerImage = bannerMovie
@@ -112,24 +112,6 @@ function Home() {
   );
 }
 
-const Row = ({ title, movie = [] }) => {
-  return (
-    <div className="row">
-      <h2>{title}</h2>
-      <div className="cardcontainer">
-        {movie.map(
-          (item, i) =>
-            item.poster_path && ( 
-              <div className="card" key={i}>
-                <Card
-                  img={`https://image.tmdb.org/t/p/original/${item.poster_path}`}
-                />
-              </div>
-            )
-        )}
-      </div>
-    </div>
-  );
-};
+
 
 export default Home;

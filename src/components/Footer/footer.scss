@@ -1,0 +1,43 @@
+.footer{
+    background-color: #000;
+    height: 35vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .footericon{
+        height: 20%;
+        width: 70%;
+        display: flex;
+        align-items: center;
+
+        i{
+            font-size: 1.7vw;
+            padding-right: 1.5vw;
+            font-weight: 500;
+            color: #fefefe;
+        }
+    }
+
+    .footertext{
+        height: 70%;
+        width: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .text{
+            height: 100%;
+            width: calc(100% / 4);
+            color: #fefefe;
+            padding: 2vw 0;
+
+            h5{
+                font-size: 1vw;
+                font-weight: 400;
+                padding: 0.5vw 0;
+            }
+        }
+    }
+}
