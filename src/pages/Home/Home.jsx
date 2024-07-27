@@ -7,7 +7,10 @@ const movieUrl = "https://api.themoviedb.org/3/movie";
 const tvUrl = "https://api.themoviedb.org/3/tv";
 const imgUrl = "https://image.tmdb.org/t/p/original";
 const upcoming = "upcoming";
-const api_key = "13eb858c1ea865b45427bfcb67ce040d";
+const api_key = "your api key here";
+// where to get api key? from tmdv
+// go to tmdv WebTransportBidirectionalStream, create account on seeting you can find api section 
+// there you can create your own api
 
 
 
